@@ -1,0 +1,33 @@
+import java.util.*;
+public class Array 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        int s = sc.nextInt();
+        int[] a = new int[s];
+        int itr;
+        for(itr=0; itr<s; itr++)
+        {
+            a[itr]=sc.nextInt();
+        }
+        int l=0, b=a[0];
+        for(itr=0; itr<s; itr++)
+        {
+            if(a[itr]>=l)
+            {
+                l=a[itr];
+            }
+        }
+        for(itr=0; itr<s; itr++)
+        {
+            if(a[itr]<b)
+            {
+                b=a[itr];
+            }
+        }
+        System.out.println(l);
+        System.out.println();
+        System.out.println(b);
+    }
+}
